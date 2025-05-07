@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-bot
+    runtime: python
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: BOT__BOT__TOKEN
+        fromEnvVar: TELEGRAM_TOKEN
+      - key: BOT__DB__URL
+        fromEnvVar: DB_URL
